@@ -1,3 +1,9 @@
+# nat-eth0.sh
+# handy script to setup static ip on hyper-v ubuntu vm
+# By Robert Wang @github.com/robertluwang
+# Dec 10, 2022
+# $1 - static ip on NAT hyper-v switch
+
 echo === $(date) Provisioning - nat-eth0 $1 by $(whoami) start  
 
 SUBNET=$(echo $1 | cut -d"." -f1-3)

@@ -1,7 +1,24 @@
-# update & upgrade
+# kvm-install.sh
+# handy script to install kvm packages on ubuntu 
+# By Robert Wang @github.com/robertluwang
+# Dec 10, 2022
+
+# update  
 
 sudo apt update -y
-sudo apt upgrade -y 
+
+# remove snap on ubuntu 22.04 , can skip this section for previous ubuntu 
+sudo systemctl disable snapd.service
+sudo systemctl disable snapd.socket
+sudo systemctl disable snapd.seeded.service
+sudo apt remove snapd
+sudo apt autoremove --purge snapd
+sudo rm -rf /var/cache/snapd/
+rm -rf ~/snap
+
+# upgrade
+
+sudo apt upgrade -y
 
 # check nested vt enabled for kvm 
 
