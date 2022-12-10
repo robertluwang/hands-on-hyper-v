@@ -41,3 +41,7 @@ sudo systemctl status libvirtd
 sudo usermod -aG kvm $USER
 sudo usermod -aG libvirt $USER
 
+# kvm tool 
+
+sudo apt install -y libguestfs-tools virt-top
+
