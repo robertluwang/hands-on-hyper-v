@@ -247,5 +247,19 @@ PING 192.168.80.20 (192.168.80.20) 56(84) bytes of data.
 64 bytes from 192.168.80.20: icmp_seq=1 ttl=64 time=0.684 ms
 ```
 
+## vagrant vm timezone
+
+setup correct timezone on vm, 
+
+```
+sudo timedatectl set-timezone America/Montreal
+```
+
+add line to Vagrantfile for each node, 
+
+```
+master.vm.provision "shell", inline: "sudo timedatectl set-timezone America/Montreal", privileged: false, run: "always"
+```
+
 
 
