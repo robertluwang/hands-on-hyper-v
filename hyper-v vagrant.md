@@ -191,7 +191,7 @@ C:\tools\vagrant\ub2204>vagrant up --provider hyperv                            
 ```
 check hyper-v vm working good, 
 ```
-C:\onedrive\tools\vagrant\ub2204>vagrant status
+C:\tools\vagrant\ub2204>vagrant status
 Current machine states:
 
 master                    running (hyperv)
